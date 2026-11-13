@@ -1,10 +1,5 @@
 # Proyek Temu Kembali Informasi (TKI) — Penugasan UTS 2026/2027
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Tugas3_WebCrawler_Ekstraksi.ipynb)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Jurisdiction: Indonesia](https://img.shields.io/badge/Jurisdiction-Mahkamah_Agung_RI-red.svg)](https://putusan3.mahkamahagung.go.id/)
-[![Total Documents: 77 PDFs](https://img.shields.io/badge/Total_Corpus-77_Putusan-green.svg)](#tugas-3-web-crawler--information-extraction)
-
 Repositori ini memuat implementasi proyek penugasan Ujian Tengah Semester (UTS) mata kuliah **Temu Kembali Informasi (TKI)**, Program Studi Teknik Informatika, Fakultas Teknik, Universitas Muhammadiyah Malang. Proyek ini mencakup akuisisi, pengelolaan, ekstraksi informasi, serta analisis putusan peradilan dari **Direktori Putusan Mahkamah Agung RI** pada wilayah hukum **Pengadilan Negeri Banjarmasin** untuk perkara **Pidana Khusus (Narkotika dan Psikotropika)**.
 
 ---
