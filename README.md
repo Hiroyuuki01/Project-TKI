@@ -8,7 +8,8 @@ Repositori ini memuat implementasi proyek penugasan Ujian Tengah Semester (UTS) 
 
 ```text
 Project-TKI/
-├── Tugas3_WebCrawler_Ekstraksi.ipynb # [TUGAS 3] Notebook Google Colab (Crawler & Ekstraksi Regex)
+├── Scrapping.ipynb                  # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (Bisa dibuka di Colab & VS Code)
+├── Tugas3_WebCrawler_Ekstraksi.ipynb # [TUGAS 3] Notebook Alternatif Khusus Server Cloud Colab
 ├── Hasil_Ekstraksi_Tugas3.csv       # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
 ├── Dataset/
 │   └── Narkotika.zip                # [TUGAS 2] Arsip ZIP berisi dokumen putusan terpilih (*.pdf)
@@ -52,9 +53,11 @@ Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi en
 3. **Ekstraksi Entitas Cerdas (Regex Heuristics)**:
    - **Kolom Wajib**: `No Putusan`, `Lembaga Peradilan`, `Barang Bukti`, `Amar Putusan`.
    - **Kolom Nilai Tambah (Poin Plus)**: `Identitas Terdakwa`, `Tuntutan JPU`.
-4. **Notebook Google Colab**:
-   - Dijalankan langsung melalui tautan [Tugas3_WebCrawler_Ekstraksi.ipynb](Tugas3_WebCrawler_Ekstraksi.ipynb) atau klik badge:  
-     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Tugas3_WebCrawler_Ekstraksi.ipynb)
+4. **Petunjuk Lingkungan Eksekusi Notebook (`Scrapping.ipynb`)**:
+   - 💻 **Disarankan Dijalankan di VS Code (Komputer Lokal)**:  
+     Modul *Web Crawler* menggunakan library `DrissionPage` yang menghubungkan script ke aplikasi Google Chrome nyata di komputer Anda. Hal ini diperlukan karena website Direktori Putusan Mahkamah Agung RI (`putusan3.mahkamahagung.go.id`) dilindungi sistem keamanan **Cloudflare Turnstile (Anti-Bot)** yang memerlukan browser asli agar terhindar dari *HTTP 403 Forbidden*.
+   - ☁️ **Dapat Dibuka & Dijalankan di Google Colaboratory**:  
+     Bagi penguji/dosen yang membuka melalui tautan Google Colab, crawler browser otomatis beralih ke pembacaan berkas korpus yang sudah tersedia di folder `PDF_Putusan/`, sehingga proses pembersihan teks ke `TXT_Putusan/` dan ekstraksi regex ke `Hasil_Ekstraksi_Tugas3.csv` dapat diuji langsung dengan lancar.
 5. **Koleksi Berkas Korpus**:
    - Folder PDF: [`PDF_Putusan/`](PDF_Putusan/) (77 berkas putusan)
    - Folder TXT: [`TXT_Putusan/`](TXT_Putusan/) (77 berkas teks bersih)
@@ -69,7 +72,7 @@ Bagi penguji / dosen, berikut adalah hyperlink langsung untuk pengumpulan di LMS
 * **Tugas 2 (Hyperlink Repositori GitHub)**:  
   `https://github.com/Hiroyuuki01/Project-TKI`
 * **Tugas 3 (Hyperlink Google Colaboratory)**:  
-  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Tugas3_WebCrawler_Ekstraksi.ipynb`
+  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Scrapping.ipynb`
 * **Tugas 3 (Hyperlink Folder PDF Putusan)**:  
   `https://github.com/Hiroyuuki01/Project-TKI/tree/main/PDF_Putusan`
 * **Tugas 3 (Hyperlink Folder TXT Putusan)**:  
