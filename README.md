@@ -8,8 +8,7 @@ Repositori ini memuat implementasi proyek penugasan Ujian Tengah Semester (UTS) 
 
 ```text
 Project-TKI/
-├── Scrapping.ipynb                  # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (Bisa dibuka di Colab & VS Code)
-├── Tugas3_WebCrawler_Ekstraksi.ipynb # [TUGAS 3] Notebook Alternatif Khusus Server Cloud Colab
+├── Scrapping.ipynb                  # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (VS Code & Colab)
 ├── Hasil_Ekstraksi_Tugas3.csv       # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
 ├── Dataset/
 │   └── Narkotika.zip                # [TUGAS 2] Arsip ZIP berisi dokumen putusan terpilih (*.pdf)
@@ -54,10 +53,10 @@ Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi en
    - **Kolom Wajib**: `No Putusan`, `Lembaga Peradilan`, `Barang Bukti`, `Amar Putusan`.
    - **Kolom Nilai Tambah (Poin Plus)**: `Identitas Terdakwa`, `Tuntutan JPU`.
 4. **Petunjuk Lingkungan Eksekusi Notebook (`Scrapping.ipynb`)**:
-   - 💻 **Disarankan Dijalankan di VS Code (Komputer Lokal)**:  
-     Modul *Web Crawler* menggunakan library `DrissionPage` yang menghubungkan script ke aplikasi Google Chrome nyata di komputer Anda. Hal ini diperlukan karena website Direktori Putusan Mahkamah Agung RI (`putusan3.mahkamahagung.go.id`) dilindungi sistem keamanan **Cloudflare Turnstile (Anti-Bot)** yang memerlukan browser asli agar terhindar dari *HTTP 403 Forbidden*.
-   - ☁️ **Dapat Dibuka & Dijalankan di Google Colaboratory**:  
-     Bagi penguji/dosen yang membuka melalui tautan Google Colab, crawler browser otomatis beralih ke pembacaan berkas korpus yang sudah tersedia di folder `PDF_Putusan/`, sehingga proses pembersihan teks ke `TXT_Putusan/` dan ekstraksi regex ke `Hasil_Ekstraksi_Tugas3.csv` dapat diuji langsung dengan lancar.
+   - 💻 **Dijalankan di VS Code (Komputer Lokal / Desktop)**:  
+     Modul *Web Crawler* menggunakan library `DrissionPage` yang menghubungkan program langsung ke peramban Google Chrome nyata di komputer Anda. Hal ini diperlukan karena website Direktori Putusan Mahkamah Agung RI (`https://putusan3.mahkamahagung.go.id`) dilindungi sistem keamanan **Cloudflare Turnstile (Anti-Bot)** yang memerlukan peramban browser fisik agar terhindar dari *HTTP 403 Forbidden*.
+   - ☁️ **Akses via Google Colaboratory**:  
+     Tautan Google Colaboratory disediakan bagi dosen/penguji untuk meninjau struktur kode asli, logika parsing regex, dan modul etika `robots.txt`. Namun, proses live crawling riil ke server Mahkamah Agung membutuhkan browser desktop (VS Code).
 5. **Koleksi Berkas Korpus**:
    - Folder PDF: [`PDF_Putusan/`](PDF_Putusan/) (77 berkas putusan)
    - Folder TXT: [`TXT_Putusan/`](TXT_Putusan/) (77 berkas teks bersih)
