@@ -4,7 +4,7 @@ Repositori ini memuat implementasi proyek penugasan Ujian Tengah Semester (UTS) 
 
 ---
 
-## 📑 Struktur Repositori
+##  Struktur Repositori
 
 ```text
 Project-TKI/
@@ -21,7 +21,7 @@ Project-TKI/
 
 ---
 
-## 📌 BAGIAN I: TUGAS 2 — Akuisisi & Pengelolaan Dataset (SUBCPMK-2)
+##  BAGIAN I: TUGAS 2 — Akuisisi & Pengelolaan Dataset (SUBCPMK-2)
 
 Pada penugasan ini, dilakukan akuisisi manual dan pengelolaan dokumen putusan peradilan narkotika dari Pengadilan Negeri Banjarmasin (rekomendasi tahun 2023–2025, bukan berstatus Berkekuatan Hukum Tetap).
 
@@ -40,7 +40,7 @@ Pada penugasan ini, dilakukan akuisisi manual dan pengelolaan dokumen putusan pe
 
 ---
 
-## 📌 BAGIAN II: TUGAS 3 — Web Crawler & Information Extraction (SUBCPMK-3)
+##  BAGIAN II: TUGAS 3 — Web Crawler & Information Extraction (SUBCPMK-3)
 
 Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi entitas terstruktur (*Information Extraction*) dengan spesifikasi:
 
@@ -53,10 +53,8 @@ Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi en
    - **Kolom Wajib**: `No Putusan`, `Lembaga Peradilan`, `Barang Bukti`, `Amar Putusan`.
    - **Kolom Nilai Tambah (Poin Plus)**: `Identitas Terdakwa`, `Tuntutan JPU`.
 4. **Petunjuk Lingkungan Eksekusi Notebook (`Scrapping.ipynb`)**:
-   - 💻 **Dijalankan di VS Code (Komputer Lokal / Desktop)**:  
+   -  **Dijalankan di VS Code (Komputer Lokal / Desktop)**:  
      Modul *Web Crawler* menggunakan library `DrissionPage` yang menghubungkan program langsung ke peramban Google Chrome nyata di komputer Anda. Hal ini diperlukan karena website Direktori Putusan Mahkamah Agung RI (`https://putusan3.mahkamahagung.go.id`) dilindungi sistem keamanan **Cloudflare Turnstile (Anti-Bot)** yang memerlukan peramban browser fisik agar terhindar dari *HTTP 403 Forbidden*.
-   - ☁️ **Akses via Google Colaboratory**:  
-     Tautan Google Colaboratory disediakan bagi dosen/penguji untuk meninjau struktur kode asli, logika parsing regex, dan modul etika `robots.txt`. Namun, proses live crawling riil ke server Mahkamah Agung membutuhkan browser desktop (VS Code).
 5. **Koleksi Berkas Korpus**:
    - Folder PDF: [`PDF_Putusan/`](PDF_Putusan/) (77 berkas putusan)
    - Folder TXT: [`TXT_Putusan/`](TXT_Putusan/) (77 berkas teks bersih)
