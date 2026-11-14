@@ -11,9 +11,9 @@ Project-TKI/
 ├── Scrapping.ipynb                     # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (VS Code & Colab)
 ├── Tugas4_Preprocessing_Indexing.ipynb # [TUGAS 4] Notebook Preprocessing, Inverted Index, TF-IDF & Okapi BM25
 ├── Hasil_Ekstraksi_Tugas3.csv          # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
-├── Dataset/
+├── Dataset overview tugas 2/
 │   └── Narkotika.zip                   # [TUGAS 2] Arsip ZIP berisi dokumen putusan terpilih (*.pdf)
-├── Overview/
+├── Overview tugas 2/
 │   └── Overview.xlsx                   # [TUGAS 2] Tabel ringkasan data putusan format Microsoft Excel
 ├── PDF_Putusan/                        # [TUGAS 3] Koleksi 77 file PDF putusan pengadilan asli
 ├── TXT_Putusan/                        # [TUGAS 3] Koleksi 77 file teks putusan bersih tanpa noise watermark
@@ -26,8 +26,8 @@ Project-TKI/
 
 Pada penugasan ini, dilakukan akuisisi manual dan pengelolaan dokumen putusan peradilan narkotika dari Pengadilan Negeri Banjarmasin (rekomendasi tahun 2023–2025, bukan berstatus Berkekuatan Hukum Tetap).
 
-* **Berkas ZIP Dataset**: Tersedia di folder [`Dataset/Narkotika.zip`](Dataset/Narkotika.zip).
-* **Ringkasan Excel**: Tersedia di folder [`Overview/Overview.xlsx`](Overview/Overview.xlsx).
+* **Berkas ZIP Dataset**: Tersedia di folder [`Dataset overview tugas 2/Narkotika.zip`](Dataset%20overview%20tugas%202/Narkotika.zip).
+* **Ringkasan Excel**: Tersedia di folder [`Overview tugas 2/Overview.xlsx`](Overview%20tugas%202/Overview.xlsx).
 
 ### Tabel Ringkasan Putusan Terpilih (Overview)
 
