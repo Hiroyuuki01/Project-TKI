@@ -63,7 +63,7 @@ Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi en
 
 ---
 
-## 📌 BAGIAN III: TUGAS 4 — Preprocessing, Indexing, & Pembobotan Teks (SUBCPMK-4)
+##  BAGIAN III: TUGAS 4 — Preprocessing, Indexing, & Pembobotan Teks (SUBCPMK-4)
 
 Pada penugasan ini, dilakukan tahapan inti temu kembali informasi (*Information Retrieval*) pada seluruh bagian teks dari **77 dokumen putusan perkara Narkotika PN Banjarmasin**:
 
@@ -84,23 +84,6 @@ Pada penugasan ini, dilakukan tahapan inti temu kembali informasi (*Information 
    - Menguji perankingan dokumen putusan menggunakan kueri kasus narkotika nyata (*permufakatan jahat, barang bukti timbangan/sabu, pasal 112 dan pasal 114*).
 5. **Notebook Google Colaboratory**:
    - Dijalankan langsung melalui tautan: [Tugas4_Preprocessing_Indexing.ipynb](Tugas4_Preprocessing_Indexing.ipynb)
-
----
-
-## 🔗 Tautan Pengumpulan Tugas (Format LMS)
-
-Bagi penguji / dosen, berikut adalah hyperlink langsung untuk pengumpulan di LMS:
-
-* **Tugas 2 (Hyperlink Repositori GitHub)**:  
-  `https://github.com/Hiroyuuki01/Project-TKI`
-* **Tugas 3 (Hyperlink Google Colaboratory)**:  
-  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Scrapping.ipynb`
-* **Tugas 3 (Hyperlink Folder PDF Putusan)**:  
-  `https://github.com/Hiroyuuki01/Project-TKI/tree/main/PDF_Putusan`
-* **Tugas 3 (Hyperlink Folder TXT Putusan)**:  
-  `https://github.com/Hiroyuuki01/Project-TKI/tree/main/TXT_Putusan`
-* **Tugas 4 (Hyperlink Google Colaboratory)**:  
-  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Tugas4_Preprocessing_Indexing.ipynb`
 
 ---
 
