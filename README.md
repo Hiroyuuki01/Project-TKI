@@ -8,15 +8,16 @@ Repositori ini memuat implementasi proyek penugasan Ujian Tengah Semester (UTS) 
 
 ```text
 Project-TKI/
-├── Scrapping.ipynb                  # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (VS Code & Colab)
-├── Hasil_Ekstraksi_Tugas3.csv       # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
+├── Scrapping.ipynb                     # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (VS Code & Colab)
+├── Tugas4_Preprocessing_Indexing.ipynb # [TUGAS 4] Notebook Preprocessing, Inverted Index, TF-IDF & Okapi BM25
+├── Hasil_Ekstraksi_Tugas3.csv          # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
 ├── Dataset/
-│   └── Narkotika.zip                # [TUGAS 2] Arsip ZIP berisi dokumen putusan terpilih (*.pdf)
+│   └── Narkotika.zip                   # [TUGAS 2] Arsip ZIP berisi dokumen putusan terpilih (*.pdf)
 ├── Overview/
-│   └── Overview.xlsx                # [TUGAS 2] Tabel ringkasan data putusan format Microsoft Excel
-├── PDF_Putusan/                     # [TUGAS 3] Koleksi 77 file PDF putusan pengadilan asli
-├── TXT_Putusan/                     # [TUGAS 3] Koleksi 77 file teks putusan bersih tanpa noise watermark
-└── README.md                        # Dokumentasi komprehensif proyek
+│   └── Overview.xlsx                   # [TUGAS 2] Tabel ringkasan data putusan format Microsoft Excel
+├── PDF_Putusan/                        # [TUGAS 3] Koleksi 77 file PDF putusan pengadilan asli
+├── TXT_Putusan/                        # [TUGAS 3] Koleksi 77 file teks putusan bersih tanpa noise watermark
+└── README.md                           # Dokumentasi komprehensif proyek
 ```
 
 ---
@@ -62,6 +63,30 @@ Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi en
 
 ---
 
+## 📌 BAGIAN III: TUGAS 4 — Preprocessing, Indexing, & Pembobotan Teks (SUBCPMK-4)
+
+Pada penugasan ini, dilakukan tahapan inti temu kembali informasi (*Information Retrieval*) pada seluruh bagian teks dari **77 dokumen putusan perkara Narkotika PN Banjarmasin**:
+
+1. **Pipeline Preprocessing Teks Hukum**:
+   - **Cleaning & Noise Removal**: Menghapus nomor halaman berulang, URL, dan sisa pecahan watermark MA.
+   - **Case Folding**: Mengubah seluruh teks menjadi huruf kecil (*lowercase*).
+   - **Tokenizing**: Memecah naskah putusan tebal menjadi unit token kata.
+   - **Normalisasi Istilah Narkotika**: Menyeragamkan varian kata teknis hukum (`shabu` $\rightarrow$ `sabu`, `extacy` $\rightarrow$ `ekstasi`, `jpu` $\rightarrow$ `jaksa`, `uu` $\rightarrow$ `undang`).
+   - **Stopword Removal**: Menghilangkan kata hubung umum Bahasa Indonesia serta kata struktural dokumen peradilan.
+   - **Fast Cached Stemming**: Mengembalikan kata berimbuhan ke kata dasar dengan algoritma **Nazief-Adriani / Sastrawi** yang dioptimasi dengan kamus *cache* sehingga memproses seluruh naskah tebal korpus dalam hitungan detik.
+2. **Pembangunan Inverted Index (Indeks Terbalik)**:
+   - Memetakan setiap *term* kata dasar ke dalam *posting list* dokumen beserta frekuensi kata (*Term Frequency* / TF), frekuensi dokumen (*Document Frequency* / DF), dan *Inverse Document Frequency* (IDF).
+   - Ekspor data: [`Inverted_Index_Tugas4.json`](Inverted_Index_Tugas4.json) dan [`Tabel_Inverted_Index_Tugas4.csv`](Tabel_Inverted_Index_Tugas4.csv).
+3. **Teknik Pembobotan Teks (Weighting)**:
+   - **Sublinear TF-IDF (Vector Space Model)**: Menggunakan pembobotan $w_{t,d} = (1 + \ln \text{tf}) \times \text{idf}$ disertai normalisasi L2 (*Cosine Similarity*).
+   - **Okapi BM25**: Algoritma pembobotan probabilistik dengan penyesuaian panjang dokumen putusan ($k_1=1.5, b=0.75$).
+4. **Mesin Pencari Putusan (Query Retrieval)**:
+   - Menguji perankingan dokumen putusan menggunakan kueri kasus narkotika nyata (*permufakatan jahat, barang bukti timbangan/sabu, pasal 112 dan pasal 114*).
+5. **Notebook Google Colaboratory**:
+   - Dijalankan langsung melalui tautan: [Tugas4_Preprocessing_Indexing.ipynb](Tugas4_Preprocessing_Indexing.ipynb)
+
+---
+
 ## 🔗 Tautan Pengumpulan Tugas (Format LMS)
 
 Bagi penguji / dosen, berikut adalah hyperlink langsung untuk pengumpulan di LMS:
@@ -74,6 +99,8 @@ Bagi penguji / dosen, berikut adalah hyperlink langsung untuk pengumpulan di LMS
   `https://github.com/Hiroyuuki01/Project-TKI/tree/main/PDF_Putusan`
 * **Tugas 3 (Hyperlink Folder TXT Putusan)**:  
   `https://github.com/Hiroyuuki01/Project-TKI/tree/main/TXT_Putusan`
+* **Tugas 4 (Hyperlink Google Colaboratory)**:  
+  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Tugas4_Preprocessing_Indexing.ipynb`
 
 ---
 
