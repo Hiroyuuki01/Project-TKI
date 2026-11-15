@@ -94,8 +94,6 @@ Pada penugasan ini, dilakukan tahapan inti temu kembali informasi (*Information 
 
 Bagi penguji / dosen, berikut adalah hyperlink langsung untuk pengumpulan di LMS:
 
-* **Tugas 2 (Hyperlink Repositori GitHub)**:  
-  `https://github.com/Hiroyuuki01/Project-TKI`
 * **Tugas 3 (Hyperlink Google Colaboratory)**:  
   `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Scrapping.ipynb`
 * **Tugas 3 (Hyperlink Folder PDF Putusan)**:  
