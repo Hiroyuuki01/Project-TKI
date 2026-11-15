@@ -8,15 +8,16 @@ Repositori ini memuat implementasi proyek penugasan Ujian Tengah Semester (UTS) 
 
 ```text
 Project-TKI/
+├── Dataset/
+│   ├── PDF_Putusan/                    # [TUGAS 3] Koleksi 77 file PDF putusan pengadilan asli
+│   ├── TXT_Putusan/                    # [TUGAS 3] Koleksi 77 file teks putusan bersih tanpa noise watermark
+│   └── Putusan.zip                     # [TUGAS 2 & 3] Arsip ZIP seluruh berkas putusan
+├── Overview tugas 2-3/
+│   ├── Hasil_Ekstraksi_Tugas3.csv      # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
+│   └── Overview_tugas2.xlsx            # [TUGAS 2] Tabel ringkasan data putusan format Microsoft Excel
+├── Overview_Tugas2.csv                 # [TUGAS 2] Tabel ringkasan CSV putusan terpilih
 ├── Scrapping.ipynb                     # [TUGAS 3] Notebook Web Crawler (DrissionPage) & Ekstraksi Regex (VS Code & Colab)
 ├── Tugas4_Preprocessing_Indexing.ipynb # [TUGAS 4] Notebook Preprocessing, Inverted Index, TF-IDF & Okapi BM25
-├── Hasil_Ekstraksi_Tugas3.csv          # [TUGAS 3] Tabel CSV hasil ekstraksi seluruh 77 putusan
-├── Dataset overview tugas 2/
-│   └── Narkotika.zip                   # [TUGAS 2] Arsip ZIP berisi dokumen putusan terpilih (*.pdf)
-├── Overview tugas 2/
-│   └── Overview.xlsx                   # [TUGAS 2] Tabel ringkasan data putusan format Microsoft Excel
-├── PDF_Putusan/                        # [TUGAS 3] Koleksi 77 file PDF putusan pengadilan asli
-├── TXT_Putusan/                        # [TUGAS 3] Koleksi 77 file teks putusan bersih tanpa noise watermark
 └── README.md                           # Dokumentasi komprehensif proyek
 ```
 
@@ -26,8 +27,9 @@ Project-TKI/
 
 Pada penugasan ini, dilakukan akuisisi manual dan pengelolaan dokumen putusan peradilan narkotika dari Pengadilan Negeri Banjarmasin (rekomendasi tahun 2023–2025, bukan berstatus Berkekuatan Hukum Tetap).
 
-* **Berkas ZIP Dataset**: Tersedia di folder [`Dataset overview tugas 2/Narkotika.zip`](Dataset%20overview%20tugas%202/Narkotika.zip).
-* **Ringkasan Excel**: Tersedia di folder [`Overview tugas 2/Overview.xlsx`](Overview%20tugas%202/Overview.xlsx).
+* **Berkas ZIP Dataset**: Tersedia di file [`Dataset/Putusan.zip`](Dataset/Putusan.zip).
+* **Ringkasan Excel**: Tersedia di folder [`Overview tugas 2-3/Overview_tugas2.xlsx`](Overview%20tugas%202-3/Overview_tugas2.xlsx).
+* **Ringkasan CSV**: Tersedia di file [`Overview_Tugas2.csv`](Overview_Tugas2.csv).
 
 ### Tabel Ringkasan Putusan Terpilih (Overview)
 
@@ -57,9 +59,10 @@ Pada penugasan ini, dibangun sistem perayap web (*web crawler*) dan ekstraksi en
    -  **Dijalankan di VS Code (Komputer Lokal / Desktop)**:  
      Modul *Web Crawler* menggunakan library `DrissionPage` yang menghubungkan program langsung ke peramban Google Chrome nyata di komputer Anda. Hal ini diperlukan karena website Direktori Putusan Mahkamah Agung RI (`https://putusan3.mahkamahagung.go.id`) dilindungi sistem keamanan **Cloudflare Turnstile (Anti-Bot)** yang memerlukan peramban browser fisik agar terhindar dari *HTTP 403 Forbidden*.
 5. **Koleksi Berkas Korpus**:
-   - Folder PDF: [`PDF_Putusan/`](PDF_Putusan/) (77 berkas putusan)
-   - Folder TXT: [`TXT_Putusan/`](TXT_Putusan/) (77 berkas teks bersih)
-   - Tabel CSV: [`Hasil_Ekstraksi_Tugas3.csv`](Hasil_Ekstraksi_Tugas3.csv)
+   - Folder PDF: [`Dataset/PDF_Putusan/`](Dataset/PDF_Putusan/) (77 berkas putusan asli)
+   - Folder TXT: [`Dataset/TXT_Putusan/`](Dataset/TXT_Putusan/) (77 berkas teks bersih)
+   - Arsip ZIP: [`Dataset/Putusan.zip`](Dataset/Putusan.zip)
+   - Tabel CSV: [`Overview tugas 2-3/Hasil_Ekstraksi_Tugas3.csv`](Overview%20tugas%202-3/Hasil_Ekstraksi_Tugas3.csv)
 
 ---
 
@@ -87,6 +90,22 @@ Pada penugasan ini, dilakukan tahapan inti temu kembali informasi (*Information 
 
 ---
 
+## 🔗 Tautan Pengumpulan Tugas (Format LMS)
+
+Bagi penguji / dosen, berikut adalah hyperlink langsung untuk pengumpulan di LMS:
+
+* **Tugas 2 (Hyperlink Repositori GitHub)**:  
+  `https://github.com/Hiroyuuki01/Project-TKI`
+* **Tugas 3 (Hyperlink Google Colaboratory)**:  
+  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Scrapping.ipynb`
+* **Tugas 3 (Hyperlink Folder PDF Putusan)**:  
+  `https://github.com/Hiroyuuki01/Project-TKI/tree/main/Dataset/PDF_Putusan`
+* **Tugas 3 (Hyperlink Folder TXT Putusan)**:  
+  `https://github.com/Hiroyuuki01/Project-TKI/tree/main/Dataset/TXT_Putusan`
+* **Tugas 4 (Hyperlink Google Colaboratory)**:  
+  `https://colab.research.google.com/github/Hiroyuuki01/Project-TKI/blob/main/Tugas4_Preprocessing_Indexing.ipynb`
+
+---
 ## Identitas Pengembang
 
 * **Mahasiswa**: Muhammad Aulia Rahman (NIM: 202310370311005)
